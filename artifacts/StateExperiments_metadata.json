@@ -1,0 +1,106 @@
+{
+	"compiler": {
+		"version": "0.8.31+commit.fd3a2265"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "name_",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "age_",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "newAge",
+						"type": "uint256"
+					}
+				],
+				"name": "exp1_correctStorageUpdate",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "newAge",
+						"type": "uint256"
+					}
+				],
+				"name": "exp1_wrongMemoryUpdate",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "p",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "age",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/StateExperiments.sol": "StateExperiments"
+		},
+		"evmVersion": "osaka",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/StateExperiments.sol": {
+			"keccak256": "0xcacd077c7a548eec2c33ae3f262e3a32c739c2af94d0decc7efd5c15514f9de0",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://78113431c766f3eae85088cefbc76f40d02eae0c985cd22bafce17a914064299",
+				"dweb:/ipfs/Qmcoqjc5ee6zAtFuzRMPfVCg5B4Cpsfcq3hxZqzPjwYioP"
+			]
+		}
+	},
+	"version": 1
+}

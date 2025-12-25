@@ -4,36 +4,49 @@ pragma solidity ^0.8.20;
 contract GasOptimization {
     uint256[] public arr;
 
-    // Version A: naive
-    function pushNaive(uint256 n) external {
+    function reset() public {
+        delete arr;
+    }
+
+    // A) Naive
+    function pushNaive(uint256 n) public {
         for (uint256 i = 0; i < n; i++) {
             arr.push(i);
         }
     }
 
-    // Version B: optimized (cache length + use local)
-    function pushOptimized(uint256 n) external {
-        uint256 i = 0;
-        while (i < n) {
-            arr.push(i);
-            unchecked { i++; } // safe because i < n and n is uint256
-        }
-    }
-
-    // Version C: more optimized (cache arr reference, minimize repeated reads)
-    function pushExtreme(uint256 n) external {
-        uint256[] storage a = arr; // storage reference caching
+    // B) Optimized: cached + unchecked
+    function pushOptimized(uint256 n) public {
+        uint256[] storage a = arr;
         for (uint256 i = 0; i < n; ) {
             a.push(i);
             unchecked { i++; }
         }
     }
 
-    function reset() external {
-        delete arr;
-    }
+    // C) Extreme: set length ONCE + store by index (assembly)
+    function pushExtreme(uint256 n) public {
+        uint256 start = arr.length;
 
-    function length() external view returns (uint256) {
-        return arr.length;
+        // increase length once
+        assembly {
+            sstore(arr.slot, add(sload(arr.slot), n))
+        }
+
+        // base slot of array data = keccak256(arr.slot)
+        bytes32 base;
+        assembly {
+            mstore(0x00, arr.slot)
+            base := keccak256(0x00, 0x20)
+        }
+
+        // write elements directly: arr[start + i] = i
+        for (uint256 i = 0; i < n; ) {
+            bytes32 pos = bytes32(uint256(base) + (start + i));
+            assembly {
+                sstore(pos, i)
+            }
+            unchecked { i++; }
+        }
     }
 }

@@ -25,19 +25,6 @@
 				"type": "function"
 			},
 			{
-				"inputs": [],
-				"name": "length",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
 				"inputs": [
 					{
 						"internalType": "uint256",
@@ -112,11 +99,11 @@
 	},
 	"sources": {
 		"contracts/GasOptimization.sol": {
-			"keccak256": "0x5c4d4232182f6f46e98b311a8bfffc3c243c3650e22ee226bdfc678ca3797c74",
+			"keccak256": "0xf67694f52feaeb583953cf535a145ee37d9d2a09be781eaa98aa834347c0c3e5",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://346cf9d4bfad663766e1b060ebb0bd5fc19762d4804626b719aa53f36fc91faa",
-				"dweb:/ipfs/QmU47tkTRV3JM7PpjQJKuM9zJRrt9oLoRLxSqBsQL7vrrC"
+				"bzz-raw://5cec256e42ee3d98973f7707e6dc4b97be4f6eaacc62a113c0310072400eda17",
+				"dweb:/ipfs/Qmb6uRoctDbGhuNdyBPrS9WwRrPkcEtkuUFW4F85Kn2m6S"
 			]
 		}
 	},

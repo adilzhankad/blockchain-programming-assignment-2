@@ -96,11 +96,11 @@
 	},
 	"sources": {
 		"contracts/HelloWorld.sol": {
-			"keccak256": "0x61bb5ae15828fc7fbd7ce0a77af06e68a11de0ed7e85e37206a55ad18cff477f",
+			"keccak256": "0xe4f64190bf1c1d96979e2fb53238571dcaa577ab3e93d370630f90d6aa489357",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://8e9e89b8684288e28bfc0fa7ad9d2c00207c88de3bcad0de072d06fad413866b",
-				"dweb:/ipfs/QmPikCyrqQLTgXYWkUEeQ11CrbGdRYbYBGeERRpBpV9Ukg"
+				"bzz-raw://61cf2c6f141206546ebceb596fe810637068a21cb3744841f7c28f7aedf35525",
+				"dweb:/ipfs/QmPC4N176ALzVGqjmL69PrdER2nK5jGaN4fuE9ofBpBxXS"
 			]
 		}
 	},
